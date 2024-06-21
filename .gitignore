@@ -1,5 +1,8 @@
 # Compiled python modules.
 *.pyc
+data/detections/
+train_dataset_with_activity/
+data/test_dataset/
 
 # Byte-compiled
 _pycache__/
