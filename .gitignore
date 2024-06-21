@@ -1,8 +1,12 @@
 # Compiled python modules.
 *.pyc
+
+# JRDB dataset
 data/detections/
 train_dataset_with_activity/
 data/test_dataset/
+data/images/
+data/raw/
 
 # Byte-compiled
 _pycache__/
