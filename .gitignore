@@ -2,11 +2,11 @@
 *.pyc
 
 # JRDB dataset
-data/detections/
-train_dataset_with_activity/
-data/test_dataset/
-data/images/
-data/raw/
+human_scene_transformer/data/detections/
+human_scene_transformer/train_dataset_with_activity/
+human_scene_transformer/data/test_dataset/
+human_scene_transformer/data/images/
+human_scene_transformer/data/raw/
 
 # Byte-compiled
 _pycache__/
