@@ -1,3 +1,19 @@
+# added data
+human_scene_transformer/data/pedestrians/eth/
+human_scene_transformer/data/pedestrians/hotel/
+human_scene_transformer/data/pedestrians/raw/
+human_scene_transformer/data/pedestrians/zara1/
+human_scene_transformer/data/pedestrians/zara2/
+human_scene_transformer/data/pedestrians/univ/
+human_scene_transformer/data/pedestrians/models/
+human_scene_transformer/data/jrdb/
+
+# update contents
+human_scene_transformer/model/pedestrians_eth_test_run/
+
+# DL contents
+human_scene_transformer/models/checkpoints/
+
 # Compiled python modules.
 *.pyc
 

@@ -156,6 +156,12 @@ def main(argv: Sequence[str]) -> None:
       [os.path.join(_MODEL_PATH.value, 'params', 'operative_config.gin')],
       None,
       skip_unknown=True)
+
+  # # ローカルデータセットパスで上書き
+  # gin.parse_config([
+  #     'JRDBDatasetParams.path = "/home/tamlab/person_tracker_ws/src/hst/human_scene_transformer/data/jrdb/"'
+  # ])
+
   print('Actual gin config used:')
   print(gin.config_str())
 
