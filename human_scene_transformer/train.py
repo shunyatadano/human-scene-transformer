@@ -21,6 +21,14 @@ from absl import flags
 from absl import logging
 import gin
 
+# import train_model
+# import training_params as tp
+# from jrdb import dataset_params as jrdb_dp
+# from jrdb import input_fn as jrdb_input_fn
+# from model import model_params as mp
+# from pedestrians import dataset_params as pedestrians_dp
+# from pedestrians import input_fn as pedestrians_input_fn
+
 from human_scene_transformer import train_model
 from human_scene_transformer import training_params as tp
 from human_scene_transformer.jrdb import dataset_params as jrdb_dp

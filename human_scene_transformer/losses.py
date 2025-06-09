@@ -453,7 +453,10 @@ class MinNLLPositionMixtureCategoricalCrossentropyLoss(Loss):
 
     loss = position_loss['loss'] + mixture_loss['loss']
 
-    loss_dict = position_loss | mixture_loss
+    # loss_dict = position_loss | mixture_loss
+    loss_dict = position_loss.copy()  # position_loss を変更しないようにコピーを作成
+    loss_dict.update(mixture_loss)    # mixture_loss の内容で loss_dict を更新
+
 
     loss_dict['loss'] = loss
 
