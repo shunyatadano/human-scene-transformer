@@ -1,4 +1,4 @@
-PedestriansDatasetParams.path = '<dataset_path>'
+PedestriansDatasetParams.path = '/home/tamlab/person_tracker_ws/src/hst/human_scene_transformer/data/pedestrians'
 PedestriansDatasetParams.dataset = 'eth'
 PedestriansDatasetParams.train_config = 'train'  # train, trainval
 PedestriansDatasetParams.eval_config = 'val' # val, test
