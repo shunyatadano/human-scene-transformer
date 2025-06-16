@@ -1,3 +1,7 @@
+# custom .gitignore for Python projects
+human_scene_transformer/data/jrdb
+human_scene_transformer/models
+
 # Compiled python modules.
 *.pyc
 

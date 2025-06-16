@@ -15,7 +15,6 @@
 """Fuses detections to tracks.
 """
 
-
 import json
 import os
 
@@ -42,7 +41,6 @@ _OUTPUT_PATH = flags.DEFINE_string(
     default=None,
     help='Path to output folder.'
 )
-
 
 def get_agents_3d_bounding_box_dict(input_path, scene):
   """Returns a dict of agent labels and their bounding boxes."""
