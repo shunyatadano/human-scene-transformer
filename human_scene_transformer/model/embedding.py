@@ -35,8 +35,21 @@ class SinusoidalEmbeddingLayer(tf.keras.layers.Layer):
         tf.math.log(float(self.max_freq) / float(self.min_freq)) /
         tf.maximum(1.0, self.num_freqs - 1))
     # [num_freqs]
-    self.inv_freqs = self.min_freq * tf.exp(
-        tf.range(self.num_freqs, dtype=tf.float32) * -log_freq_increment)
+
+    # self.inv_freqs = self.min_freq * tf.exp(
+    #     tf.range(self.num_freqs, dtype=tf.float32) * -log_freq_increment
+    #     )
+    self.inv_freqs = self.add_weight(
+            name='inv_freqs',
+            shape=(self.hidden_size // 2,),
+            initializer='zeros',
+            trainable=False
+        )
+    # 初期値を設定
+    self.inv_freqs.assign(
+        1.0 / (10000 ** (tf.range(0, self.hidden_size, 2, dtype=tf.float32) / self.hidden_size))
+    )
+    super().build(input_shape)
 
   def call(self, input_tensor):
     # [..., num_freqs]

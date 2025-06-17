@@ -44,6 +44,8 @@ _CKPT_PATH = flags.DEFINE_string(
 
 def evaluation(checkpoint_path):
   """Evaluates Model on Pedestrian dataset."""
+  # eager executionを有効化
+  tf.config.run_functions_eagerly(True)
   d_params = dataset_params.JRDBDatasetParams(num_agents=None)
 
   dataset = input_fn.load_dataset(
@@ -52,14 +54,20 @@ def evaluation(checkpoint_path):
       augment=False,
       shuffle=False,
       allow_parallel=False,
-      evaluation=False,
+      evaluation=True,
       repeat=False,
-      keep_subsamples=False,
+      keep_subsamples=True,
   )
 
   model_p = model_params.ModelParams()
 
   model = hst_model.HumanTrajectorySceneTransformer(model_p)
+
+  # Add debugging: check input shape
+  sample_batch = next(iter(dataset.batch(1)))
+  print("Input batch keys:", sample_batch.keys() if hasattr(sample_batch, 'keys') else type(sample_batch))
+  for key, value in sample_batch.items():
+    print(f"Key: {key}, Shape: {value.shape}, Dtype: {value.dtype}")
 
   _, _ = model(next(iter(dataset.batch(1))), training=False)
 
