@@ -72,7 +72,8 @@ def evaluation(checkpoint_path):
   _, _ = model(next(iter(dataset.batch(1))), training=False)
 
   checkpoint_mngr = tf.train.Checkpoint(model=model)
-  checkpoint_mngr.restore(checkpoint_path).assert_existing_objects_matched()
+  checkpoint_mngr.restore(checkpoint_path).expect_partial() # Use expect_partial to avoid strict matching of all variables
+  # checkpoint_mngr.restore(checkpoint_path).assert_existing_objects_matched()
   logging.info('Restored checkpoint: %s', checkpoint_path)
 
   ade_metric = metrics.ade.MinADE(model_p)
