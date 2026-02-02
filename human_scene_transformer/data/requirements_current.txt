@@ -241,7 +241,7 @@ stack-data==0.6.3
 sympy==1.13.3
 tensorboard==2.12.3
 tensorboard-data-server==0.7.2
-tensorflow @ file:///home/tamlab/person_tracker_ws/tensorflow-2.12.0%2Bnv23.06-cp38-cp38-linux_aarch64.whl#sha256=ed0cb20b2d6100e5f508579d670a1e3c362f2020573f2d88d1ebb15f9f9d20c2
+tensorflow @ file:///home/tamlab/ws_whill/tensorflow-2.12.0%2Bnv23.06-cp38-cp38-linux_aarch64.whl#sha256=ed0cb20b2d6100e5f508579d670a1e3c362f2020573f2d88d1ebb15f9f9d20c2
 tensorflow-addons @ file:///home/tamlab/Public/Downloads/TensorFlow-Addons-Raspberry-Pi_64-bit/tensorflow_addons-0.14.0.dev0-cp38-cp38-linux_aarch64.whl#sha256=9715c088030b5ae14c3f4414c8d9fee961a468aedabaff05adedad5abe0b6e4c
 tensorflow-datasets==4.9.2
 tensorflow-estimator==2.12.0

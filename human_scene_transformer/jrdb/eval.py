@@ -159,7 +159,7 @@ def main(argv: Sequence[str]) -> None:
 
   # # ローカルデータセットパスで上書き
   # gin.parse_config([
-  #     'JRDBDatasetParams.path = "/home/tamlab/person_tracker_ws/src/hst/human_scene_transformer/data/jrdb/"'
+  #     'JRDBDatasetParams.path = "/home/tamlab/ws_whill/src/hst/human_scene_transformer/data/jrdb/"'
   # ])
 
   print('Actual gin config used:')

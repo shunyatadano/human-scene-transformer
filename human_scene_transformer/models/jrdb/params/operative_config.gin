@@ -150,7 +150,7 @@ JRDBDatasetParams.num_history_steps = 6
 JRDBDatasetParams.num_pointcloud_points = 512
 JRDBDatasetParams.num_steps = 19
 JRDBDatasetParams.path = \
-    '/home/tamlab/person_tracker_ws/src/hst/human_scene_transformer/data/jrdb/jrdb2022_processed/'
+    '/home/tamlab/ws_whill/src/hst/human_scene_transformer/data/jrdb/jrdb2022_processed/'
 JRDBDatasetParams.subsample = 5
 JRDBDatasetParams.timestep = 0.33333333333334
 JRDBDatasetParams.train_scenes = %TRAIN_SCENES
